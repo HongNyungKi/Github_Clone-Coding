@@ -1,14 +1,18 @@
-                                                /* 기본설정 */
-.body__container{
+/* 전체 기본 설정 */
+.body__container {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400px;
     color: #333;
 }
 
-                                                /* 전역스타일 */
+a{
+    text-decoration: none;
+}
 
-/* BTN */
+/* 전역 스타일 */
+
+/* 전역 스타일 -> BTN */
 .btn {
     height: 34px;
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
@@ -24,6 +28,7 @@
     line-height: 1.5;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -42,7 +47,7 @@
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
 
-/* INPUT--TEXT */
+/* 전역 스타일 ->INPUT--TEXT */
 .input--text {
     height: 34px;
     padding: 0 10px;
@@ -74,3 +79,61 @@
 .input--text::-moz-input-placeholder {
     color: #cacaca;
 }
+
+/* HEADER */
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    background: #fff;
+}
+
+header .inner {
+    height: 75px;
+    max-width: 980px;
+    /* margin: 0 auto; 는 중앙정렬기능이다. 단 반드시 width값이 있어야한다. */
+    margin: 0 auto;
+}
+
+/* HEADER - LEFT COLUMN */
+header .menu-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    /* 클릭할수 있게 선택자를 a로 지정하여 background image 속성으로 로고를 삽입한다. */
+    /* 때문에, a 의 크기를 설정해 주기 위해 블럭요소로 바꿔준다. */
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../IMG/logo.svg);
+    /* tag에 직접 이미지 삽입시 alt 기능을 위해 텍스트를 삭제 하지 않고 들여쓰기 기능을 활용하여 안보이게 보낸다. */
+    text-indent: -9999px;
+}
+
+header .logo a:hover{
+    background: url(../IMG/logo_on.svg);
+}
+
+header .main-menu {
+    display: flex;
+}
+
+header .main-menu li a {
+    /* margin-right: 10px; 대신 padding:10px 을 쓴다.  이는 선택 영역의 크기를 확대시켜준다. */
+    /* 이때, 선택자를 a를 해야하고, padding값을 주기위해서는 블럭요소호 바꿔줘야한다. */
+    display: block;
+    padding: 10px;
+    color: #3c4146;
+}
+
+header .main-menu li a:hover{
+    color: #4078c0;
+}
+
+/* HEADER - RIGHT COLUMN */
