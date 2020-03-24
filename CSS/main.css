@@ -1,0 +1,76 @@
+                                                /* 기본설정 */
+.body__container{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    color: #333;
+}
+
+                                                /* 전역스타일 */
+
+/* BTN */
+.btn {
+    height: 34px;
+    background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    /*   justify-content: center가 아닌 padding 값으로 조절 */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1.5;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+.btn.btn--primary {
+    border: 1px solid #65b836;
+    color: #fff;
+    background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
+
+/* INPUT--TEXT */
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /*   포커스 될때 파란색 가이드라인 제거. border로 제어가 좋다 */
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    font-size: 16px;
+}
+
+.input--text:focus {
+    border-color: #51a7e8;
+    /*   기존의 그림자를 유지하는 방법이다. */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075),
+        0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+.input--text::-webkit-input-placeholder {
+    /* vender prefix(브라우저 업체별 접두사)를 통해 placeholder의 색을 조절 */
+    color: #cacaca;
+}
+
+.input--text::-ms-input-placeholder {
+    color: #cacaca;
+}
+
+.input--text::-moz-input-placeholder {
+    color: #cacaca;
+}
