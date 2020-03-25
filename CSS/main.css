@@ -1,4 +1,6 @@
-/* 전체 기본 설정 */
+/* 전역 스타일 */
+
+/* 전역 스타일 -> 기본설정 */
 .body__container {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -10,7 +12,21 @@ a{
     text-decoration: none;
 }
 
-/* 전역 스타일 */
+/* 전역 스타일 -> SECTION & INNER */
+.section{
+    /* section를 기준으로 무언갈 배치하기 위해 (어떤것이 오든 되도록 inner에서 멈추기 위해) */ */
+    position: relative;
+}
+
+.section .inner{
+    max-width: 980px;
+    /* margin: 0 auto; 는 중앙정렬기능이다. 단 반드시 width값이 있어야한다. */
+    margin: 0 auto;
+    /* border나 padding때문에 생기는 여백에 의해 사이즈가 변하는것을 방지 */
+    box-sizing: border-box;
+    /* inner를 기준으로 무언갈 배치하기 위해 (어떤것이 오든 되도록 inner에서 멈추기 위해) */
+    position: relative;
+}
 
 /* 전역 스타일 -> BTN */
 .btn {
@@ -47,7 +63,7 @@ a{
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
 
-/* 전역 스타일 ->INPUT--TEXT */
+/* 전역 스타일 -> INPUT--TEXT */
 .input--text {
     height: 34px;
     padding: 0 10px;
@@ -80,6 +96,39 @@ a{
     color: #cacaca;
 }
 
+/* 전역 스타일 -> FOLAT CLEARFIX */
+  .float--left {
+    float: left;
+  }
+  .float--right {
+    float: right;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+/* 전역스타일 -> SUMMARY */
+.summary{
+
+}
+
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.summary__description {
+    font-size: 26px;
+    font-weight: 300;
+    color: #797979;
+    line-height: 1.5;
+}
+
+
 /* HEADER */
 header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.75);
@@ -89,9 +138,7 @@ header {
 
 header .inner {
     height: 75px;
-    max-width: 980px;
-    /* margin: 0 auto; 는 중앙정렬기능이다. 단 반드시 width값이 있어야한다. */
-    margin: 0 auto;
+    
 }
 
 /* HEADER - LEFT COLUMN */
@@ -137,3 +184,90 @@ header .main-menu li a:hover{
 }
 
 /* HEADER - RIGHT COLUMN */
+header .sign-group {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+header .btn-group {
+    /* order값이 높을수록 순서가 뒤로 밀려남 */
+    order: 2;
+    /* a태그(inline요소)사이의 띄어쓰기 공백을 없애기 위함이다. */
+    display: flex;
+}
+
+header .btn-group .sign-in{
+    margin-right: 4px;
+}
+
+#search-form {
+    order: 1;
+    margin-right: 12px;
+}
+
+#search{
+    width: 160px;
+    font-size: 14px;
+}
+
+#search+[type="submit"] {
+    /* class값 없이 선택자 선정하는법 */
+    display: none;
+}
+
+header .sub-menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+header .sub-menu li a{
+    font-size: 13px;
+    display: block;
+    padding: 8px;
+    color: #3c4146;
+}
+
+header .sub-menu li a:hover{
+    color: #4078c0;
+}
+
+/* VISUAL */
+.section--visual {
+    background-image: url(../IMG/bg.jpg);
+    background-repeat: no-repeat;
+    /* background 이미지의 기본위치 */
+    background-position: bottom left;
+    /* 화면의 크기에 맞게 공백없이 확대,축소한다. */
+    background-size: cover;
+    position: relative;
+}
+
+.section--visual::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100%; 와 같게 하려면, bottom:0; right:0;*/
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.section--visual .inner {
+    padding: 160px;
+}
+
+.section--visual .summary__title{
+    color: #fff;
+    font-size: 54px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25),
+                0 1px 25px rgba(0,0,0,0.75);
+}
+
+.section--visual .summary__description{
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25),
+                0 1px 25px rgba(0,0,0,0.75);
+}
