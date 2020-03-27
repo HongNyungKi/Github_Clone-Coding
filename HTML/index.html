@@ -76,18 +76,55 @@
             <div class="inner">
                 <div class="summary">
                     <div class="summary__title">
-                        How people build software
+                        How&nbsp;people build&nbsp;software
+                        <!-- 반응형을 위해 fix하는 개념의 br태그 보다 &nbsp;를 활용한다. -->
                     </div>
                     <div class="summary__description">
                         Millions of developers use GitHub to build personal projects,
-                        support their businesses, and work together on open source technologies.
+                        support their businesses, and&nbsp;work together on open source technologies.
                     </div>
                 </div>
                 <form action="" method="post" id="sign-form">
-                    <input type="text" class="input--text" placeholder="">
-                    <input type="text" class="input--text" placeholder="">
-                    <input type="text" class="input--text" placeholder="">
+                    <ul>
+                        <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+                        <li><input type="email" class="input--text" placeholder="Your email address"></li>
+                        <li>
+                            <input type="password" class="input--text" placeholder="Create a password">
+                            <p class="caption">
+                                Use at least one letter, one numeral, and seven characters.
+                            </p>
+                        </li>
+                        <li>
+                            <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
+                            <p class="caption">
+                                By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy.
+                                We'll occasionally send you account related emails.
+                            </p>
+                        </li>
+                    </ul>
                 </form>
+            </div>
+        </section>
+
+        <!-- FEATURE -->
+        <section class="section section--feature">
+            <div class="summary">
+                <div class="summary__title">
+                    Welcome home, developers
+                </div>
+                <div class="summary__description">
+                    GitHub fosters a fast, flexible, and collaborative development process that lets you work on your
+                    own or with others.
+                </div>
+            </div>
+            <div class="video">
+                <!-- 반응형의 매개체 즉, 비율에 맞게 비디오가 출력될수 있도록 제어하기 위해 video-ratio태그로 감싸준다. -->
+                <div class="video-ratio">
+                    <iframe width="1905" height="800" src="https://www.youtube.com/embed/afvT1c1ii0c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="tiles">
+
             </div>
         </section>
 </body>
