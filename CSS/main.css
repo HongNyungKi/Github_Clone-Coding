@@ -320,7 +320,7 @@ header .sub-menu li a:hover{
 /* FEATURE */
 .section--feature {
     background: #f5f5f5;
-    padding: 66px;
+    padding-top: 66px;
 }
 
 .section--feature .summary {
