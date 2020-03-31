@@ -1,0 +1,60 @@
+/* 전역속성 */
+
+.summary__title{
+    /* 선택자 우선순위를 고려 */
+    font-size: 34px !important;
+}
+
+
+/* FEATURE */
+.summary__description{
+    font-size: 22px;
+}
+
+
+/* WHERE IS */
+.section--feature .tiles ul li{
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#map{
+ width: auto;   
+ margin: 40px -20px 0 -20px;
+ /* summary가 같고 있는 padding은 유지하고 map이 가로넓이를 다 쓰기위해서  */
+ border-left: none;
+ border-right: none;
+}
+
+/* PRICING */
+.section--pricing .card{
+    display: block;
+    
+}
+
+.section--pricing .card .cell .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.section--pricing .card .cell2{
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* FOOTER */
+footer .site-links{
+    float: none;
+    display: block;
+    text-align:center;
+}
+
+footer .site-links:first-child{
+    margin-bottom: 20px;
+}
+
+footer .site-links li{
+    display: inline;
+}
+
